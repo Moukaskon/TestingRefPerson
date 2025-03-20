@@ -1,14 +1,14 @@
 class Person {
-    private String name;
+    private Name name;
     private ContactInfo contactInfo;
 
-    public Person(String name, String email, String phoneNumber) {
-        this.name = name;
+    public Person(String fullName, String email, String phoneNumber) {
+        this.name = new Name(fullName);
         this.contactInfo = new ContactInfo(email, phoneNumber);
     }
 
     public void displayPersonInfo() {
-        System.out.println("Name: " + name);
+        name.display();
         contactInfo.display();
     }
 }
